@@ -2,6 +2,15 @@
   "log": {
     "level": "info"
   },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-out",
+        "address": "1.1.1.1",
+        "detour": "warp-out"
+      }
+    ]
+  },
   "inbounds": [
     {
       "type": "shadowsocks",
@@ -9,7 +18,8 @@
       "listen": "::",
       "listen_port": 8388,
       "method": "2022-blake3-aes-256-gcm",
-      "password": "N3blEBEB9eU7kwT5vjE3qkl+GpM6F+ZhHv8RMojTyK8="  // valid base64
+      "password": "N3blEBEB9eU7kwT5vjE3qkl+GpM6F+ZhHv8RMojTyK8=",
+      "network": "tcp"  // <== restrict to TCP-only
     }
   ],
   "outbounds": [
@@ -35,8 +45,11 @@
   "route": {
     "rules": [
       {
-        "protocol": ["tcp", "udp"],
+        "protocol": ["tcp"],
         "outbound": "warp-out"
+      },
+      {
+        "outbound": "direct"
       }
     ]
   }
