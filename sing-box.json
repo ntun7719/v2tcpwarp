@@ -16,7 +16,7 @@
   "outbounds": [
     {
       "type": "wireguard",
-      "tag": "warp-out",
+      "tag": "direct",
       "server": "162.159.192.1",
       "server_port": 2408,
       "private_key": "COAYqKrAXaQIGL8+Wkmfe39r1tMMR80JWHVaF443XFQ=",
@@ -28,13 +28,5 @@
       "reserved": [134, 63, 85],
       "mtu": 1280
     }
-  ],
-  "route": {
-    "rules": [
-      {
-        "type": "field",
-        "outbound": "warp-out"
-      }
-    ]
-  }
+  ]
 }
