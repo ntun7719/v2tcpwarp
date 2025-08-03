@@ -32,12 +32,11 @@
       "tag": "direct"
     }
   ],
-  "routing": {
+  "route": {
     "rules": [
       {
-        "type": "field",
-        "network": "tcp,udp",
-        "outbound_tag": "warp-out"
+        "protocol": ["tcp", "udp"],
+        "outbound": "warp-out"
       }
     ]
   }
