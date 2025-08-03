@@ -16,16 +16,15 @@
     {
       "tag": "warp-out",
       "type": "wireguard",
-      "server": {
-        "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-        "endpoint": "162.159.192.1:2408",
-        "reserved": [134, 63, 85]
-      },
-      "private_key": "COAYqKrAXaQIGL8+Wkmfe39r1tMMR80JWHVaF443XFQ=",
+      "server": "162.159.192.1",
+      "server_port": 2408,
       "local_address": [
         "172.16.0.10/32",
         "2606:4700:110:8eb1::10/128"
       ],
+      "private_key": "COAYqKrAXaQIGL8+Wkmfe39r1tMMR80JWHVaF443XFQ=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [134, 63, 85],
       "mtu": 1280
     },
     {
